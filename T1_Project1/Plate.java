@@ -1,4 +1,4 @@
-package Project1;           
+package T1_Project1;           
 //тарелка
 public class Plate {
     private int food;
