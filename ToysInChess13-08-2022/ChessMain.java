@@ -6,9 +6,11 @@ public class ChessMain {
         Player blackPlayer = new Player("Vasilyi Borgov", "Vasilyi.Borgov@mail.ru", false, 16, 23);
         System.out.println(blackPlayer);
         whitePlayer.getName();
-        System.out.println("1 Плейур"+ whitePlayer.getName());
-        System.out.println("1 Плейур"+ blackPlayer.getName());
-        System.out.println("1 Плейур"+ whitePlayer.getEmail());
+        System.out.println(" Плейур"+ whitePlayer.getName());
+        System.out.println(" Плейур"+ blackPlayer.getName());
+        System.out.println(" Плейур"+ whitePlayer.getEmail());
+        System.out.println( whitePlayer);
+
 
     }
 

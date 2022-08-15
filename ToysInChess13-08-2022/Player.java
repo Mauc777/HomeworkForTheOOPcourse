@@ -56,12 +56,13 @@ public class Player {
 
     @Override
     public String toString() {
-        return  "Player{" +
-                "name='"+ email + '\n' +
-                ", email ='" + email + "\n" + 
-                ",white ='" + white + "\n" +
-                ",rank ='" + rank + "\n" +
-                ",age ='" + age  +
-                '}';
+        return
+                // "Player{" +
+                "name='" + name + '\'' +
+                ", email ='" + email + '\'' +
+                ", white ='" + white + '\'' +
+                ", rank ='" + rank + '\'' +
+                ", age =" + age;
+        // '}';
     }
 }
