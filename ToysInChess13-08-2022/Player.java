@@ -14,45 +14,35 @@ public class Player {
         this.age = age;
     }
 
-    public String getName() {
-        return name;
-    }
+    public String getName() {return name;}
 
-    public void setName(String name) {
-        this.name = name;
-    }
+    public void setName(String name) {this.name = name;}
 
-    public String getEmail() {
-        return email;
-    }
+    public String getEmail() {return email;}
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
+    public void setEmail(String email) {this.email = email;}
 
-    public boolean isWhite() {
-        return white;
-    }
+    public boolean isWhite() {return white;}
 
-    public void setWhite(boolean white) {
-        this.white = white;
-    }
+    public void setWhite(boolean white) {this.white = white;}
 
-    public int getRank() {
-        return rank;
-    }
+    public int getRank() {return rank;}
 
+
+    // Здесь мы вводим минимальные и максимальные параметры "Ранга" Игрока.
+    //  А также проверку на наличие выхода за их рамки!
     public void setRank(int rank) {
+        if(rank < 100 || rank > 3000){
+            throw new IllegalArgumentException("Введи Ранг от 100 до 3_000!! ");
+        }
         this.rank = rank;
+        // Кстати, в set() (в сеттерах) --> мы сразу можем вводить любую необходимую функциональность.
+        System.out.println("Ранг " + name+ " был изменен на " + rank);
     }
 
-    public int getAge() {
-        return age;
-    }
+    public int getAge() {return age;}
 
-    public void setAge(int age) {
-        this.age = age;
-    }
+    public void setAge(int age) {this.age = age;}
 
     @Override
     public String toString() {
@@ -65,4 +55,22 @@ public class Player {
                 ", age =" + age;
         // '}';
     }
+
+
+    //     @Override
+//     public String toString() {
+        
+//         return "Привет" + name;
+//     }
+
+
+
 }
+
+
+
+
+
+
+
+
