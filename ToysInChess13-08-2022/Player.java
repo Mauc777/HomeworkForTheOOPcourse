@@ -7,11 +7,33 @@ public class Player {
     private int age;
 
     public Player(String name, String email, boolean white, int rank, int age) {
-        this.name = name;
-        this.email = email;
+        if(name == null || name.isBlank() || name.isEmpty()){
+            throw new IllegalArgumentException("Введите пожалуйста  ИМЯ ИГРОКА ...  ");
+        }
+        else {
+            this.name = name;
+        }
+        
+
+        if(email == null || email.isBlank() || email.isEmpty()  ) {
+            throw new IllegalArgumentException(" Введите корректный @mail!!  ");
+        } 
+        if(email.contains("@")== false || email.contains(".") == false){
+            throw new IllegalArgumentException(" Введите корректный @mail!! c @ и . ");
+        }       
+        else {
+            this.email = email;
+        }
+
+
+        if(age < 10 || 110 > age){
+            this.age = age;
+        }
+
         this.white = white;
         this.rank = rank;
-        this.age = age;
+
+        
     }
 
     public String getName() {return name;}
@@ -44,6 +66,7 @@ public class Player {
 
     public void setAge(int age) {this.age = age;}
 
+
     @Override
     public String toString() {
         return
@@ -57,16 +80,38 @@ public class Player {
     }
 
 
-    //     @Override
-//     public String toString() {
-        
-//         return "Привет" + name;
-//     }
 
 
 
 }
 
+
+
+// проверка валидности имейл??!! Вариант 1-ый ... Хотя существуют целые библиотеки для ее проверки...
+// public  Boolean checkMail(){
+//     if (getEmail() == " ") {
+//         System.out.println("Введите Адрес электронной почты. Поле пусто -->> ");
+//         }
+//         // ToDoo ------------
+//     if (this.getEmail().indexOf(".") == -1) {
+//         System.out.println("Нет символа\".\"");
+//         }
+//     if((getEmail().indexOf(",")>=0)||(getEmail().indexOf(";")>=0)||(getEmail().indexOf(" ")>=0)){
+//         System.out.println("Адрес электронной почты был введен неправильно.");
+//         }
+//     var dog = getEmail().indexOf("@");
+//         if (dog == -1) {
+//         System.out.println("Нет символа\"@\".");
+//         }
+//     if ((dog < 1) || (dog > getEmail().length() - 5)) {
+//         System.out.println("Адрес электронной почты был введен неправильно.");
+//         }
+//     if ((getEmail().charAt(dog - 1) == '.') || (getEmail().charAt(dog + 1) == '.')) {
+//     System.out.println("Адрес электронной почты был введен неправильно.");
+//     }
+//     System.out.println("Адрес электронной почты был введен ВЕРНО!");
+//     return true;
+// }
 
 
 
