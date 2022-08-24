@@ -70,13 +70,13 @@ public class Player {
     @Override
     public String toString() {
         return
-                // "Player{" +
-                "name='" + name + '\'' +
-                ", email ='" + email + '\'' +
-                ", white ='" + white + '\'' +
-                ", rank ='" + rank + '\'' +
-                ", age =" + age;
-        // '}';
+                "Player{" +
+                " name = '" + name + '\'' +
+                ", email = '" + email + '\'' +
+                ", white = '" + white + '\'' +
+                ", rank = '" + rank + '\'' +
+                ", age = " + age+
+        '}';
     }
 
 
@@ -87,31 +87,6 @@ public class Player {
 
 
 
-// проверка валидности имейл??!! Вариант 1-ый ... Хотя существуют целые библиотеки для ее проверки...
-// public  Boolean checkMail(){
-//     if (getEmail() == " ") {
-//         System.out.println("Введите Адрес электронной почты. Поле пусто -->> ");
-//         }
-//         // ToDoo ------------
-//     if (this.getEmail().indexOf(".") == -1) {
-//         System.out.println("Нет символа\".\"");
-//         }
-//     if((getEmail().indexOf(",")>=0)||(getEmail().indexOf(";")>=0)||(getEmail().indexOf(" ")>=0)){
-//         System.out.println("Адрес электронной почты был введен неправильно.");
-//         }
-//     var dog = getEmail().indexOf("@");
-//         if (dog == -1) {
-//         System.out.println("Нет символа\"@\".");
-//         }
-//     if ((dog < 1) || (dog > getEmail().length() - 5)) {
-//         System.out.println("Адрес электронной почты был введен неправильно.");
-//         }
-//     if ((getEmail().charAt(dog - 1) == '.') || (getEmail().charAt(dog + 1) == '.')) {
-//     System.out.println("Адрес электронной почты был введен неправильно.");
-//     }
-//     System.out.println("Адрес электронной почты был введен ВЕРНО!");
-//     return true;
-// }
 
 
 

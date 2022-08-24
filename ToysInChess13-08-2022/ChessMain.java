@@ -12,6 +12,8 @@ public class ChessMain {
         ChessMain main = new ChessMain();
         ArrayList<Player> players = main.createPlayers();
 
+        main.createdPieces();
+
         for (Player player : players) {
             System.out.println(player);
         }
@@ -28,6 +30,15 @@ public class ChessMain {
         players.add(blackPlayer);
         return players;
 
+    }
+
+    public void createdPieces(){
+        King whiteKing = new King(new Spot("H", 7),"whiteKing", true );
+        King blackKing = new King(new Spot("D", 8),"blackKing", false );
+        Rook whiteRook = new Rook(new Spot("A", 7), "Rook-1", true);
+        Rook whiteRook2 = new Rook(new Spot("G", 7), "Rook-2", true);
+        Knight blackKnight = new Knight(new Spot("D", 6), "Knight-1", false);
+        System.out.println(whiteKing);
     }
 
 }
