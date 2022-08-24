@@ -11,12 +11,17 @@ public class ChessMain {
         // куда мы перенесли создание Игроков
         ChessMain main = new ChessMain();
         ArrayList<Player> players = main.createPlayers();
+        ArrayList<Piece> pieces = main.createdPieces();
 
-        main.createdPieces();
+        for (Piece piece : pieces) {
+            System.out.println(piece);    
+        }
 
         for (Player player : players) {
             System.out.println(player);
         }
+
+      
 
     }
 
@@ -32,13 +37,20 @@ public class ChessMain {
 
     }
 
-    public void createdPieces(){
+    public ArrayList<Piece> createdPieces(){
         King whiteKing = new King(new Spot("H", 7),"whiteKing", true );
         King blackKing = new King(new Spot("D", 8),"blackKing", false );
         Rook whiteRook = new Rook(new Spot("A", 7), "Rook-1", true);
         Rook whiteRook2 = new Rook(new Spot("G", 7), "Rook-2", true);
         Knight blackKnight = new Knight(new Spot("D", 6), "Knight-1", false);
-        System.out.println(whiteKing);
+
+        ArrayList<Piece> pieces = new ArrayList<>();
+        pieces.add(whiteKing);
+        pieces.add(blackKing);
+        pieces.add(whiteRook);
+        pieces.add(whiteRook2);
+        pieces.add(blackKnight);
+        return pieces;
     }
 
 }
