@@ -13,12 +13,14 @@ public class ChessMain {
         ChessMain main = new ChessMain();
         ArrayList<Player> players = main.createPlayers();
 
-        HashMap<String, Piece> pieceHashMap =  main.createdPieces();
+        HashMap<String, Piece> pieceHashMap = main.createdPieces();
         System.out.println(pieceHashMap);
 
-        for (Player player : players) {
-            System.out.println(player);
-        }
+        main.play(players, pieceHashMap);
+
+        // for (Player player : players) {
+        // System.out.println(player);
+        // }
 
     }
 
@@ -35,22 +37,27 @@ public class ChessMain {
     }
 
     // public ArrayList<Piece> createdPieces(){
-    public HashMap <String, Piece> createdPieces() {
+    public HashMap<String, Piece> createdPieces() {
         King whiteKing = new King(new Spot("H", 7), "whiteKing-1 ", true);
         King blackKing = new King(new Spot("D", 8), "blackKing-1 ", false);
-        Rook whiteRook1 = new Rook(new Spot("A", 7), "Rook-1 ", true);
-        Rook whiteRook2 = new Rook(new Spot("G", 7), "Rook-2 ", true);
+        Rook whiteRook1 = new Rook(new Spot("A", 7), "Rook-1", true);
+        Rook whiteRook2 = new Rook(new Spot("G", 7), "Rook-2", true);
         Knight blackKnight = new Knight(new Spot("D", 6), "Knight-1 ", false);
 
-
-        HashMap <String, Piece> pieceHashMap =  new HashMap<>();
+        HashMap<String, Piece> pieceHashMap = new HashMap<>();
         pieceHashMap.put(whiteKing.getId(), whiteKing);
         pieceHashMap.put(blackKing.getId(), blackKing);
-        pieceHashMap.put(whiteRook1.getId(),whiteRook1);
+        pieceHashMap.put(whiteRook1.getId(), whiteRook1);
         pieceHashMap.put(whiteRook2.getId(), whiteRook2);
         pieceHashMap.put(blackKnight.getId(), blackKnight);
         return pieceHashMap;
 
+    }
+
+    public void play(ArrayList<Player> players, HashMap<String, Piece> hashMap) {
+        // move1
+        players.get(0).movePiece(hashMap.get("Rook-1"), new Spot("A", 8));
+        players.get(1).movePiece(hashMap.get("Knight-1 "), new Spot("C", 8));
     }
 
 }

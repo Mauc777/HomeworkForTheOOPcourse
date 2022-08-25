@@ -40,16 +40,14 @@ public abstract class Piece {
         this.spot = spot;
     }
 
-
     @Override
     public String toString() {
-        return
-                "Piece{" +
+        return "Piece{" +
                 " name ='" + name + '\'' +
                 ", spot ='" + spot + '\'' +
                 ", white ='" + white + '\'' +
                 ", id ='" + id + '\'' +
                 ", killed =" + killed +
-        '}';
+                '}';
     }
 }

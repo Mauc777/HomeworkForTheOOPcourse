@@ -3,12 +3,12 @@ public class Spot {
     int y;
 
     public Spot(String x, int y) {
+        if (x.compareTo("H") > 0 || y > 8 || y <= 0) {
+            throw new IllegalArgumentException("Некорректный ход");
+        }
         this.x = x;
         this.y = y;
     }
-
-
-
 
     public void setX(String x) {
         this.x = x;
@@ -30,6 +30,4 @@ public class Spot {
     public String toString() {
         return x + y;
     }
-}    
-
- 
+}
