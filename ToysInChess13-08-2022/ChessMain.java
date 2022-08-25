@@ -56,7 +56,14 @@ public class ChessMain {
 
     public void play(ArrayList<Player> players, HashMap<String, Piece> hashMap) {
         // move1
-        players.get(0).movePiece(hashMap.get("Rook-1"), new Spot("A", 8));
+        try {
+            players.get(0).movePiece(hashMap.get("blackKing-1 "), new Spot("A", 8));
+
+        } catch (IllegalArgumentException error) {
+            System.out.println("Ход НЕ КОРРЕКТЕН. Повторите");
+            //retry functionality
+
+        }
         players.get(1).movePiece(hashMap.get("Knight-1 "), new Spot("C", 8));
     }
 
