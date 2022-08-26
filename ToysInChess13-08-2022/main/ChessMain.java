@@ -1,3 +1,4 @@
+package main;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -38,11 +39,11 @@ public class ChessMain {
 
     // public ArrayList<Piece> createdPieces(){
     public HashMap<String, Piece> createdPieces() {
-        King whiteKing = new King(new Spot("H", 7), "whiteKing-1 ", true);
-        King blackKing = new King(new Spot("D", 8), "blackKing-1 ", false);
-        Rook whiteRook1 = new Rook(new Spot("A", 7), "Rook-1", true);
-        Rook whiteRook2 = new Rook(new Spot("G", 7), "Rook-2", true);
-        Knight blackKnight = new Knight(new Spot("D", 6), "Knight-1 ", false);
+        King whiteKing = new King(new Spot("h", 7), "whiteKing-1 ", true);
+        King blackKing = new King(new Spot("d", 8), "blackKing-1 ", false);
+        Rook whiteRook1 = new Rook(new Spot("a", 7), "Rook-1", true);
+        Rook whiteRook2 = new Rook(new Spot("g", 7), "Rook-2", true);
+        Knight blackKnight = new Knight(new Spot("d", 6), "Knight-1 ", false);
 
         HashMap<String, Piece> pieceHashMap = new HashMap<>();
         pieceHashMap.put(whiteKing.getId(), whiteKing);
@@ -57,14 +58,14 @@ public class ChessMain {
     public void play(ArrayList<Player> players, HashMap<String, Piece> hashMap) {
         // move1
         try {
-            players.get(0).movePiece(hashMap.get("blackKing-1 "), new Spot("A", 8));
+            players.get(0).movePiece(hashMap.get("Rook-1"), new Spot("a", 8));
 
         } catch (IllegalArgumentException error) {
             System.out.println("Ход НЕ КОРРЕКТЕН. Повторите");
             //retry functionality
 
         }
-        players.get(1).movePiece(hashMap.get("Knight-1 "), new Spot("C", 8));
+        players.get(1).movePiece(hashMap.get("Knight-1 "), new Spot("c", 8));
     }
 
 }

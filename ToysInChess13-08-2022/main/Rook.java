@@ -1,3 +1,4 @@
+package main;
 public class Rook extends Piece {
 
     private static final String name = "Rook - Ладья";

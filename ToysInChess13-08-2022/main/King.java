@@ -1,3 +1,4 @@
+package main;
 public class King extends Piece {
     // Константа
     private static final String name = "King";
