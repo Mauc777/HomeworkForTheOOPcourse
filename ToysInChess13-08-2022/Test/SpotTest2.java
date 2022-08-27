@@ -1,7 +1,21 @@
+import Main.*;
+
+import junit.jupiter;
+
+import junit.jupiter.api.assertThrows;
+import junit.jupiter.api.assertNotNull;
+import junit.jupiter.api.assertEquals;
+
+
+
+import org.unit.jupiter.*;
+import org.junit.jupiter.Test;
+
 public class SpotTest2 {
 
-    
-    // Прогон позитив-сценария
+
+
+
     @Test
     public void validSpotTest() {
         Spot spot = new Spot("a", 1);
@@ -25,14 +39,14 @@ public class SpotTest2 {
         });
     }
 
-     // @ParameterizedTest
-    // @ValueSource(ints = { -1, 0, 100 })
-    // public void invalidYValueParamsTest(int y) {
-    //     assertThrows(IllegalArgumentException.class, () -> {
-    //         Spot spot = new Spot("h", y);
-    //     });
+    @ParameterizedTest
+    @ValueSource(ints = { -1, 0, 100 })
+    public void invalidYValueParamsTest(int y) {
+        assertThrows(IllegalArgumentException.class, () -> {
+            Spot spot = new Spot("h", y);
+        });
 
-    // }
+    }
 
     
 }
