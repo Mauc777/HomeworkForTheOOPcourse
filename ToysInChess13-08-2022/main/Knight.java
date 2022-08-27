@@ -1,4 +1,4 @@
-package main;
+package Main;
 public class Knight extends Piece {
 
     private static final String name = "Knight - Конь";

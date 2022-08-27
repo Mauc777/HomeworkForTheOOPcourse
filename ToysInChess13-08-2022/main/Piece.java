@@ -1,4 +1,4 @@
-package main;
+package Main;
 public abstract class Piece {
     private String name;
     private Spot spot;
