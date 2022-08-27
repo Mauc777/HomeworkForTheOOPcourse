@@ -1,13 +1,16 @@
 package Test;
 
+
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertThrows;
 
+import org.junit.Test;
+
 import org.junit.runners.Parameterized.Parameters;
 
 import Program.Spot;
-import Test.*;
+
 
 
 public class SpotTest2 {
@@ -37,6 +40,8 @@ public class SpotTest2 {
         });
     }
 
+
+    // ToDoo никак не хочет видеть данный тест....
     @Parameters
     @ValueSource(ints = { -1, 0, 100 })
     public void invalidYValueParamsTest(int y) {
@@ -45,6 +50,7 @@ public class SpotTest2 {
         });
 
     }
+
 
     
 }
