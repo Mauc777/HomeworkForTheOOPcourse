@@ -1,4 +1,5 @@
-package Main;
+package Program;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 

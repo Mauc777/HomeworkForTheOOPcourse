@@ -1,20 +1,16 @@
-import Main.*;
+package Test;
 
-import junit.jupiter;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertThrows;
 
-import junit.jupiter.api.assertThrows;
-import junit.jupiter.api.assertNotNull;
-import junit.jupiter.api.assertEquals;
+import org.junit.runners.Parameterized.Parameters;
 
+import Program.Spot;
+import Test.*;
 
-
-import org.unit.jupiter.*;
-import org.junit.jupiter.Test;
 
 public class SpotTest2 {
-
-
-
 
     @Test
     public void validSpotTest() {
@@ -23,6 +19,8 @@ public class SpotTest2 {
         assertEquals("a", spot.getX());
         assertEquals(1, spot.getY());
     }
+
+    
 
     @Test
     public void invalidXValueTest() {
@@ -39,7 +37,7 @@ public class SpotTest2 {
         });
     }
 
-    @ParameterizedTest
+    @Parameters
     @ValueSource(ints = { -1, 0, 100 })
     public void invalidYValueParamsTest(int y) {
         assertThrows(IllegalArgumentException.class, () -> {

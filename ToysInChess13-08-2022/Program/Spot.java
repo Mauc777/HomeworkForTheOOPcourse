@@ -1,4 +1,5 @@
-package Main;
+package Program;
+
 public class Spot {
     String x;
     int y;

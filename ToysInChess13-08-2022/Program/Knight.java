@@ -1,4 +1,5 @@
-package Main;
+package Program;
+
 public class Knight extends Piece {
 
     private static final String name = "Knight - Конь";

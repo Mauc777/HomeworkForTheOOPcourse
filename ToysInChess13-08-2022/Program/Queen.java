@@ -1,4 +1,5 @@
-package Main;
+package Program;
+
 public class Queen extends Piece {
 
     private static final String name = "Queen";
