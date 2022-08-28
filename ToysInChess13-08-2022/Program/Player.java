@@ -89,6 +89,7 @@ public class Player {
         System.out.println("Piece" + piece.getName() + " Пошел-(ла) на -->> : " + spot);
     }
 
+    
     @Override
     public String toString() {
         return "Player{" +

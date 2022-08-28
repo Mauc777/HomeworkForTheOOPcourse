@@ -13,8 +13,11 @@ import Program.Spot;
 
 
 
+
+
 public class SpotTest2 {
 
+    // Позитивный тест
     @Test
     public void validSpotTest() {
         Spot spot = new Spot("a", 1);
@@ -25,6 +28,7 @@ public class SpotTest2 {
 
     
 
+    // Негативные тесты
     @Test
     public void invalidXValueTest() {
         assertThrows(IllegalArgumentException.class, () -> {
@@ -32,7 +36,6 @@ public class SpotTest2 {
         });
     }
    
-
     @Test
     public void invalidYValueTest() {
         assertThrows(IllegalArgumentException.class, () -> {
@@ -51,6 +54,8 @@ public class SpotTest2 {
 
     }
 
+    
 
+    
     
 }
